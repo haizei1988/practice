@@ -1,0 +1,13 @@
+ <!--pages/login/login.wxml-->
+   <loading hidden="{{hidden}}">
+        正在加载数据
+    </loading> 
+ <view>
+   <image class='bg_img' mode="widthFix" src='/images/index.png'/>   
+</view>
+<view>
+<image class='logo'  mode="widthFix" src='/images/logo.png'/>
+</view> 
+
+ <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"  disabled='{{disabled}}' class='button'>微信用户一键登录</button> 
+ <view class='button' wx:else>请升级微信版本</view>   

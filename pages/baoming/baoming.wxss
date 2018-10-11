@@ -1,0 +1,248 @@
+/* pages/baoming/baoming.wxss */
+
+.wenzi {
+  padding-bottom: 20rpx;
+}
+
+.container {
+  padding: 30rpx 0;
+  width: 97%;
+  border: 1px soild red;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  align-items: flex-start;
+}
+
+.nav-title {
+  font-size: 36rpx;
+  color: #36353a;
+}
+
+.three {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.container_v1 {
+  padding: 20repx;
+  font-family: PingFang-SC-Bold;
+  font-size: 0.9em;
+  color: #36353a;
+  letter-spacing: 0;
+  width: 30%;
+  text-align: center;
+  border: 1px soild red;
+  align-items: flex-start;
+}
+
+.container_v1_xiala1 {
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+  border-radius: 2px;
+  font-family: PingFang-SC-Medium;
+  font-size: 30rpx;
+  color: #36353a;
+  letter-spacing: 0;
+  width: 200rpx;
+  position: absolute;
+  text-align: center;
+  z-index: 100;
+}
+
+.container_v1_xiala1>view, .container_v1_xiala2>view {
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.container_v1_xiala1 navigator {
+  height: 40rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.container_v1_xiala2 {
+  font-family: PingFang-SC-Medium;
+  font-size: 30rpx;
+  color: #36353a;
+  letter-spacing: 0;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+  width: 200rpx;
+  z-index: 100;
+  border-radius: 2px;
+  position: absolute;
+}
+
+.container_v1_xiala2 navigator {
+  height: 40rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.shiyan {
+  width: 100%;
+  height: 420rpx;
+  display: block;
+  overflow: hidden;
+}
+
+.container2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20rpx 5%;
+}
+
+.container2_1 {
+  width: 60.3%;
+  font-family: PingFang-SC-Medium;
+  font-size: 26rpx;
+  color: #36353a;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.container2_2 {
+  width: 220rpx;
+  font-family: PingFang-SC-Bold;
+  font-size: 32rpx;
+  color: #fff;
+  letter-spacing: 0;
+  text-align: center;
+  background: #3aa6e1;
+  border-radius: 4px;
+  height: 40rpx;
+  padding: 4rpx;
+}
+
+.game_desc {
+  position: absolute;
+  width: 90%;
+  height: 420rpx;
+  top: 0;
+  padding-top: 40rpx;
+  color: white;
+  font-size: 36rpx;
+  font-family: PingFang-SC-Bold;
+  padding-left: 56rpx;
+  box-sizing: border-box;
+}
+
+.game_desc text {
+  font-size: 26rpx;
+  font-family: PingFang-SC-Medium;
+}
+
+.sign_up {
+  width: 160rpx;
+  height: 40rpx;
+  background: #3aa6e1;
+  color: white;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 5px;
+  float: right;
+  font-size: 0.8em;
+  position: relative;
+  right: 11rpx;
+  bottom: 15rpx;
+}
+
+.sign_b {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.new_num {
+  display: inline-block;
+  font-size: 32rpx;
+}
+
+.guizekuang {
+  width: 88%;
+  height: 280rpx;
+  /* border: 1px red solid */
+}
+
+.guize {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  bottom: 35rpx;
+  font-family: PingFang-SC-Medium;
+  font-size: 26rpx;
+  color: #fff;
+  letter-spacing: 0;
+  text-align: left;
+  padding-left: 12%;
+  box-sizing: border-box;
+  line-height: 42rpx;
+}
+
+.guize1 {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  bottom: 6rpx;
+  /* color: red;  */
+  font-family: PingFang-SC-Medium;
+  font-size: 26rpx;
+  /* color: #FFFFFF; */
+  letter-spacing: 0;
+  text-align: left;
+  padding-left: 0;
+  box-sizing: border-box;
+  line-height: 50rpx;
+}
+
+.wu {
+  width: 100%;
+  text-align: center;
+  padding-top: 417rpx;
+  /* padding-left:239rpx; */
+  box-sizing: border-box;
+}
+.search{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  padding-left: 5%;
+  box-sizing: border-box
+}
+.search_input{
+  width: 70%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1px solid #3aa6e1;
+  border-radius: 4px;
+  margin-bottom: 10rpx;
+  
+  
+}
+.search_btn{
+  width: 20%;
+     height: 60rpx;
+   line-height: 60rpx;
+  background-color: #3aa6e1;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px
+}
+.search_input_content{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 16px;
+
+}
+.search_input_user{
+   height: 60rpx;
+   line-height: 60rpx;
+  font-size: 16px
+}

@@ -1,0 +1,39 @@
+
+<view style='position:relative' wx:for="{{xinxi}}" wx:for-index="num">
+<navigator url="/pages/baomingxingqing/baomingxiangqing?challengeLogID={{item.ID}}" >
+  <view data-index="{{index}}" wx:if='{{num%2==0}}'>
+    <image src='/images/run1.png' class='shiyan' id='img1'/></view>
+  <view data-index="{{index}}" wx:if='{{num%2!==0}}'> 
+    <image src='/images/run2.png' class='shiyan' id='img2'/></view> 
+
+  <view class='game_desc'>
+  <view class='guize'>
+   <text >
+               开始：{{item.DisplayShortStartTime}}
+               结束：{{item.DisplayShortEndTime}}
+               参赛人数：{{item.TotalPeopleNum}}人
+               已报名人数：{{item.HaveEnrollNum}}人
+               竞赛步数：{{item.StepNum}}步
+               参赛费用：{{item.DisplayChallengeAmt}}
+          </text>
+           <view wx:if="{{item.DisplayChallengeAmt=='一元'}}"  class='guize1'>此次达标者平分本次竞赛总奖励</view>
+           <view wx:if="{{item.DisplayChallengeAmt=='三元'}}"  class='guize1'>此次达标者前三名按比例分配本次竞赛总奖励</view>
+           <view wx:if="{{item.DisplayChallengeAmt=='五元'}}"  class='guize1'>此次达标者前三名按比例分配本次竞赛总奖励</view>
+           <view wx:if="{{item.DisplayChallengeAmt=='免费'}}"  class='guize1'>达标者免费赢得积分奖励</view>
+  </view>
+   <view class='sign_b'> 
+      <!-- <view class='new_num'>当前已有{{item.HaveEnrollNum}}人参加比赛</view> -->
+       <view class='sign_up'  url="/pages/baomingxingqing/baomingxiangqing?challengeLogID={{item.ID}}">点击报名</view> 
+    </view>
+
+  </view>
+  <view class="container2">
+    <view class="container2_1">{{item.WeXinUserName}}发起了挑战，快来挑战</view>
+    <view url="/pages/baomingxingqing/baomingxiangqing?challengeLogID={{item.ID}}" class="container2_2">剩余名额{{item.SurplusEnrollNum}}人</view>
+  </view>
+</navigator>
+</view>
+
+<view hidden='{{not1}}' class='not1'>
+    此专区当前无任何比赛
+</view>

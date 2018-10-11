@@ -1,0 +1,130 @@
+/* pages/tiaozhanjilu/tiaozhanjilu.wxss */
+
+.container1 {
+  width: 100%;
+  border-bottom: 2px solid #e5e5e5;
+  height: 64rpx;
+}
+
+.container1_1 {
+  height: 100%;
+  width: 90%;
+  font-size: 36rpx;
+  margin: auto;
+  margin-top: 30rpx;
+}
+
+.container1_2 {
+  text-align: center;
+  width: 50%;
+  float: left;
+  height: 100%;
+}
+
+.active {
+  border-bottom: 2px solid #3aa6e1;
+}
+
+.container2 {
+  width: 90%;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 5px 14px -10px rgba(0, 0, 0, 0.50);
+  margin-top: 2px;
+}
+
+.container2_1 {
+  padding-top: 30rpx;
+  font-family: PingFang-SC-Medium;
+  font-size: 32rpx;
+  color: #36353a;
+  letter-spacing: 0;
+  text-align: center;
+}
+.price{
+  display: flex;
+  flex-direction:column;
+}
+.container2_2 {
+  padding-top: 12rpx;
+  font-family: PingFang-SC-Regular;
+  font-size: 28rpx;
+  color: #36353a;
+  letter-spacing: 0;
+  text-align: center;
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
+  position: relative;
+  left: 10rpx
+}
+
+.container2_3 {
+  font-family: PingFang-SC-Bold;
+  font-size: 40rpx;
+  color: #ff5745;
+  /* display: flex; */
+  /* letter-spacing: 0; */
+  /* text-align: center; */
+    padding-left: 16rpx;  
+    position: relative;
+    bottom: 10rpx
+}
+.container2_4 {
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: auto;
+  background: #3aa6e1;
+  border-radius: 4px;
+  font-family: PingFang-SC-Bold;
+  font-size: 36rpx;
+  color: #fff;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.container2_5 {
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 0;
+}
+
+.container2_5_1 {
+  font-family: PingFang-SC-Medium;
+  font-size: 20rpx;
+  color: #36353a;
+  letter-spacing: 0;
+  text-align: center;
+}
+.search{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10rpx
+
+}
+.search_2{
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #3aa6e1;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  padding: 0 10rpx
+}
+.search_3{
+  height: 60rpx;
+  line-height: 60rpx;
+  border:1px solid #3aa6e1;
+  border-radius: 4px;
+  color: black;
+  font-size: 14px;
+  padding: 0 10rpx
+}
+.wu {
+  width: 100%;
+  text-align: center;
+  padding-top: 417rpx;
+  /* padding-left:239rpx; */
+  box-sizing: border-box;
+}

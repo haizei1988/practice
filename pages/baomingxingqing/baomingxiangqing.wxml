@@ -1,0 +1,77 @@
+<!--pages/baomingxingqing/baomingxiangqing.wxml-->
+<import src ="../../wxParse/wxParse.wxml"/>
+<import src="../../components/toast.wxml"/>
+<template is="toast" data="{{ ...$wux.toast }}"/>
+
+<form bindsubmit="submit" report-submit='true' >
+
+ <view class="container1">
+   <image src='/images/run1.png' mode='widthFix' style='width:100%' />  
+ </view>
+
+
+<view class="container2">{{WeXinUserName}}发起了挑战，快来挑战</view>
+
+<view class="container3">剩余时间{{clock}}</view>
+<view class="container4">
+  <view  class="container4_1">开始：{{StartTime}} </view>
+ <view  class="container4_1">结束：{{EndTime}}</view>
+</view>
+<!-- <view class="container5">
+  <view  class="container5_1">开始：{{StartTime}} </view>
+ 
+</view>
+<view class="container6">
+ <view  class="container5_1">结束：{{EndTime}}</view>
+</view> -->
+<view class="container5">
+  <view  class="container5_1">参加人数：{{TotalPeopleNum}}人 </view>
+</view>
+<view class="container6">
+  <view  class="container5_1">已报名人数：{{HaveEnrollNum}}人 </view>
+</view>
+<view class="container5">
+  <view  class="container5_1">竞赛步数：{{StepNum}}步 </view>
+</view>
+<view class="container6">
+  <view  class="container5_1">参赛费用：{{ChallengeAmt}} </view>
+</view>
+<view class="container5">
+  <view wx:if="{{ChallengeAmt=='三元'}}"class="container5_2" style='margin:auto'>此次达标者前三名按比例分配本次竞赛奖励</view>
+  <view wx:if="{{ChallengeAmt=='五元'}}" class="container5_2" style='margin:auto'>此次达标者前三名按比例分配本次竞赛奖励</view>
+  <view wx:if="{{ChallengeAmt=='免费'}}" class="container5_2" style='margin:auto'>完成本次步数，获得平台10积分</view>
+  <view wx:if="{{ChallengeAmt=='一元'}}" class="container5_1" class="container5_2" style='margin:auto'>竞赛步数：本次竞赛达标用户平均分配该组竞赛总金额</view>
+</view>
+<view class="container5">
+  <view  class="container5_1">
+   <image src='{{checkbox}}' class='container5_img1' mode='widthFix' bindtap='checkType'/> 
+   <!-- <image src='/images/after.png' class='container5_img1' mode='widthFix'  hidden='{{after}}'/> -->
+   <view bindtap='lookDesc'>用户协议</view>
+  </view>
+</view>
+
+ <!-- <view class="container7" type="primary" bindtap="hahah">  -->
+    <button form-type="submit" type="default" class='container51' style='background-color:#3aa6e1;color:#FFF'>立即报名</button>
+     <!-- <view class='container51' >
+      立即报名
+    </view>  -->
+   <!-- <image src="/images/tabarsign.png" mode="widthFix" class="container7_1"/> -->
+ <!-- </view>  -->
+
+<view class="container8" hidden="{{selectbao}}">
+  <scroll-view scroll-y class="container8_1">
+    <view class="container8_1_p1">《用户协议》</view>
+    <!-- <text class="container8_1_p2"> -->
+    <template is="wxParse"  data="{{wxParseData:markdown.nodes}}"/>
+    <!-- </text> -->
+  </scroll-view>
+  <view class="container8_2" bindtap="clickclose">
+
+     <image src="/images/readered.png" mode="widthFix" class="container8_2_1"/> 
+  </view>
+</view>
+
+</form>
+<!-- <modal hidden="{{hidden}}" title="提示" confirm-text="确定"  bindconfirm="confirm1" no-cancel="true">
+    {{content}}
+</modal> -->

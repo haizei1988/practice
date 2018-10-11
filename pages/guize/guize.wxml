@@ -1,0 +1,11 @@
+<!--pages/guize/guize.wxml-->
+<!--pages/guanyuwomen/guanyuwomen.wxml-->
+<import src ="../../wxParse/wxParse.wxml"/>
+<view>
+<view class='container1'>
+<!-- <text class='hhh'>{{ExplainContent}}</text> -->
+<template is="wxParse"  data="{{wxParseData:markdown.nodes}}"/>
+
+</view>
+</view>
+

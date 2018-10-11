@@ -1,0 +1,22 @@
+<!--pages/duihuanjilu/duihuanjilu.wxml-->
+<view>
+<view class="wuxinxi" wx:if="{{duihuanjilu==''}}">当前您还没有兑换记录</view>
+  <view wx:if="{{duihuanjilu!==''}}" class='container1' wx:for="{{duihuanjilu}}">
+    <view class='container1_1'>
+    兑换编号：{{item.ChangeCode}}
+    </view>
+    <view class='container1_2'>
+      <image style='width:120rpx;height:120rpx' class='container1_2_1' src='{{baseurl}}{{item.SmallAttachments[0].AttachmentURL}}'/>
+      <view class='container1_2_2' >
+        <view class='container1_2_21'>{{item.GoodName }}</view>
+        <view class='container1_2_22'>价值{{item.GoodValuation}}元</view>
+        <view class='container1_2_23'>{{item.GoodPrice}}热卡币</view>
+      </view>
+      <view class='container1_2_3'>
+        <view class='container1_2_31'>{{item.WhetherCompleteStr}}</view>
+        <view class='container1_2_32' bindtap='continueChange' data-id="{{item.GoodID}}" data-status="{{item.DisplayGoodsStatus}}">继续兑换</view>
+      </view>
+    </view>
+  </view>
+</view>
+

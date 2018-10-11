@@ -1,0 +1,37 @@
+<!--pages/zongpaihang/zongpaihang.wxml-->
+<view class='container1'>
+  <view class='container1_11'>
+    <view class='paiming'>{{ranking}}</view>
+    <view class='container1_21'>
+      <image class='container1_2_img' src='{{UserHeadimgurl}}'/>
+      <view class='username'> {{UserName}}</view>
+    </view>
+  </view>
+  <view class='self_num'> {{StepNum}}步</view>
+</view>
+
+ 
+<view class='container2' wx:for="{{zongpaihang}}" wx:for-index="num">
+  <view class='container1_1'>
+  <!-- <view>{{item.TemporaryRanking}}</view> -->
+  <view wx:if='{{item.TemporaryRanking == 1}}' class='touxiang'> <image src='/images/no_1.png' class='sort'/></view>
+  <view wx:if='{{item.TemporaryRanking == 2}}' class='touxiang'> <image src='/images/no_2.png' class='sort'/></view>
+  <view wx:if='{{item.TemporaryRanking == 3}}' class='touxiang'> <image src='/images/no_3.png' class='sort'/></view>
+  <view wx:if='{{item.TemporaryRanking > 3}}' > <view class='touxiang1'>{{item.TemporaryRanking}}</view></view>
+  <!-- <view wx:else=''> {{item.TemporaryRanking}}</view> -->
+    <view class='container1_2'>
+      <image class='container1_2_img' src=' {{item.UserHeadimgurl}}'/>
+       <view class='username'>{{item.UserName}}</view>  
+    </view>
+  </view>
+  <view class='like'>
+    <view>{{item.StepNum}}步</view>
+    <view class='zan'>
+       <view class='zan1'>{{item.LaudNum}}</view>
+       <view class='zan2'>
+           <image   wx:if='{{!item.WhetherLaud}}'     src='/images/heart.png'  data-id="{{item.ID}}" data-index="{{num}}" bindtap='dianzan'  class='heart'/> 
+          <image  wx:if='{{item.WhetherLaud}}'  src='/images/heart-after.png'  data-id="{{item.ID}}" data-index="{{num}}" bindtap='nodianzan' class='heart'/>   
+       </view>
+    </view> 
+  </view>
+</view>

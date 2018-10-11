@@ -1,0 +1,148 @@
+<!--pages/user/user.wxml-->
+  <view class='container1'>
+    <image src='{{SHeadimgurl}}' class='container1_img'/>
+    <view class='container1_1'>{{SNickname}}</view>
+    <view class='container1_2' bindtap='modalinput'>{{qianming}}<image class="bianji" src='/images/bianji.png' /></view>
+    <view class='container1_3'>
+      <view class='container1_3_1'>参与总次数：
+          <view class='container1_3_1_2'>{{EnrollNum}}次</view>
+      </view>
+      <view class='container1_3_1'>胜利：
+          <view class='container1_3_1_2'>{{AwardNum}}次</view>
+      </view>
+      <view class='container1_3_1'>失败：
+          <view class='container1_3_1_2'>{{FailNum}}次</view>
+      </view>
+    </view>
+  </view>
+<navigator  url="/pages/chongzhi/chongzhi" class='container2'>
+   <view class='container2_1'>
+     <image src='/images/chonhzhi.png' class='container2_11' mode='widthFix'/>
+     <view class='container2_12'>
+      充值中心
+     </view>
+   </view>  
+   <view>
+     <image src='/images/jiantou.png' class='container2_13' mode='widthFix'/>
+   </view>
+</navigator>
+<navigator  url="/pages/duihuanjilu/duihuanjilu" class='container2 bai'>
+   <view class='container2_1'>
+     <image src='/images/jilu.png' class='container2_11' mode='widthFix'/>
+     <view class='container2_12'>
+      兑换记录
+     </view>
+   </view>  
+   <view>
+     <image src='/images/jiantou.png' class='container2_13' mode='widthFix'/>
+   </view>
+</navigator> 
+<navigator  url="/pages/jifendetail/jifendetail" class='container2'>
+   <view class='container2_1'>
+     <image src='/images/jifen.png' class='container2_11' mode='widthFix'/>
+     <view class='container2_12'>
+      平台积分：{{TotalIntegralNum}}分
+     </view>
+   </view>  
+   <view>
+     <image src='/images/jiantou.png' class='container2_13' mode='widthFix'/>
+   </view>
+</navigator>
+<navigator url="/pages/rekadetail/rekadetail" class='container2 bai'>
+   <view class='container2_1'>
+     <image src='/images/bi.png' class='container2_11' mode='widthFix'/>
+     <view class='container2_12'>
+      热卡币：{{TotalHotCardNum}}个
+     </view>
+   </view>  
+   <view>
+     <image src='/images/jiantou.png' class='container2_13' mode='widthFix'/>
+   </view>
+</navigator>
+<navigator  url="/pages/bushujilu/bushujilu" class='container2'>
+   <view class='container2_1'>
+     <image src='/images/bushu.png' class='container2_11' mode='widthFix'/>
+     <view class='container2_12'>
+      步数记录
+     </view>
+   </view>  
+   <view>
+     <image src='/images/jiantou.png' class='container2_13' mode='widthFix'/>
+   </view>
+</navigator> 
+
+
+
+
+<navigator  url="/pages/guize/guize" class='container2 bai'>
+   <view class='container2_1'>
+     <image src='/images/guize.png' class='container2_11' mode='widthFix'/>
+     <view class='container2_12'>
+      游戏规则
+     </view>
+   </view>  
+   <view>
+     <image src='/images/jiantou.png' class='container2_13' mode='widthFix'/>
+   </view>
+</navigator>
+<navigator  url="/pages/guanyuwomen/guanyuwomen" class='container2'>
+   <view class='container2_1'>
+     <image src='/images/women.png' class='container2_11' mode='widthFix'/>
+     <view class='container2_12'>
+      常见问题
+     </view>
+   </view>  
+   <view>
+     <image src='/images/jiantou.png' class='container2_13' mode='widthFix'/>
+   </view>
+</navigator>
+<navigator  url="/pages/xiaoxitixiang/xiaoxitixiang" class='container2 bai'>
+   <view class='container2_1'>
+     <image src='/images/xiaoxi.png' class='container2_11' mode='widthFix'/>
+     <view class='container2_12'>
+      消息提醒 <view style='display:flex;color:red'>+{{UnreadMessage}}</view>
+     </view>
+   </view>  
+   <view>
+     <image src='/images/jiantou.png' class='container2_13' mode='widthFix'/>
+   </view>
+</navigator>
+<view class='container2' bindtap="clickbao">
+   <view class='container2_1'>
+     <image src='/images/tel.png' class='container2_11' mode='widthFix'/>
+     <view class='container2_12'>
+      联系我们
+     </view>
+   </view>     
+   <view>
+     <image src='/images/jiantou.png' class='container2_13' mode='widthFix'/>
+   </view>
+</view>
+
+
+<view class="container8" hidden="{{selectbao}}">
+<view class="container8_bg">
+ <view class="container8_1">点击拨号与我们取得联系我们将竭诚为您服务 </view>
+  <view class="container8_2" bindtap="clickclose">
+    <view class="container8_2_1"  bindtap='phone'>拨号</view>
+    <view class="container8_2_1">返回</view>
+  </view>
+</view>
+</view>
+
+
+<!-- 弹出框 -->
+<!-- <modal hidden="{{hiddenmodalput}}" title="请输入个性签名" confirm-text="提交" cancel-text="重置" bindcancel="cancel" bindconfirm="confirm">  
+    <input type='text'placeholder="请输入内容" name='qianming'  auto-focus/>  
+</modal>   -->
+<view class="container8" hidden="{{selectbao1}}">
+<view class="container8_bg">
+ <view class="container8_1">
+   <textarea bindinput="bindKeyInput" class='text' value="{{qianming}}" /> 
+ </view>
+  <view class="container8_2" >
+    <view class="container8_2_1" bindtap="confirm">确定</view>
+    <view class="container8_2_1" bindtap="cancel">返回</view>
+  </view>
+</view>
+</view>

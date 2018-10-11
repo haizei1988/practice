@@ -1,0 +1,273 @@
+.shuaxin{
+  font-family: PingFang-SC-Regular;
+font-size: 12px;
+color: #36353A;
+letter-spacing: 0;
+text-align: center;
+position:relative;
+bottom:10rpx;
+
+/* margin-top: 5rpx; */
+}
+.shuaxin>image{
+  margin-top: 5rpx;
+}
+.gengxin{
+  width:30rpx;
+  height: 30rpx;
+}
+.container{
+  padding:0;
+}
+.status{
+  width: 89.3%;
+  height: 25px;
+  line-height: 25px;
+  margin:  auto;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background: #3AA6E1;
+  border-radius: 4px;
+  font-family: PingFang-SC-Bold;
+  font-size: 0.7em;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center
+}
+
+
+.container_v1{
+  display: flex;
+  justify-content:space-between;
+  width: 90%;
+  padding: 20rpx
+}
+
+.container_v1_1{
+  font-size: 30rpx;
+  font-family: PingFang-SC-Medium;
+  color: #36353A;
+}
+.shuzi{
+   font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  color: #FF5745;
+  text-align: center;
+}
+.container_v1_img{
+  width: 53.4%;
+  position: absolute;
+  left: 25%;
+  z-index: -10;
+  top: -30px;
+}
+.container_v1_img_1{
+  width: 100%;
+  height: 206px;
+  text-align: center;
+  position: relative;
+  top: 82rpx; 
+}
+
+.container_v1_img_1_1{
+  font-family: PingFang-SC-Medium;
+  font-size: 32rpx;
+  color: #36353A;
+  letter-spacing: 0;
+  text-align: center;
+}
+.container_v1_img_1_2{
+  font-family: PingFang-SC-Bold;
+  font-size: 48rpx;
+  color: #3AA6E1;
+  letter-spacing: 0;
+  text-align: center;
+}
+.container_v1_img_1_3{
+  font-family: PingFang-SC-Regular;
+  font-size: 24rpx;
+  color: #36353A;
+  letter-spacing: 0;
+  text-align: center;
+  position: relative;
+  bottom: 10rpx;
+}
+
+
+
+
+
+
+
+
+.container_v2_1{
+  width: 27%;
+  padding: 20rpx;
+  font-size: 0.7em;
+  font-family: PingFang-SC-Medium;
+  color: #36353A;
+}
+.container_v2{
+   width: 100%;
+   display: flex;
+  justify-content:space-between;
+}
+.hah{
+  width:16%;
+  height: auto;
+  margin-right: 6rpx;
+  vertical-align:sub;
+}
+.container2{
+  padding: 20rpx;
+  position:relative;
+  top:0rpx;
+}
+.container_v2_2{
+  padding-bottom: 5rpx;
+  border-bottom: 1px solid #E5E5E5;
+}
+.container3{
+  padding-top: 50rpx;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  fill-opacity: row;
+  position:relative;
+  top:-41rpx;
+}
+.container3_w{
+  width: 90%;  
+  font-family: PingFang-SC-Medium;
+  font-size: 0.8em;
+  color: #4A4A4A;
+  letter-spacing: 0;
+  text-align: left;
+  margin-left: 10rpx
+ 
+}
+.container3_1{
+  width: 30.7%;
+  /* height: 5.5%; */
+  height: 25px;
+  line-height: 25px;
+  margin:  auto;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background: #3AA6E1;
+  border-radius: 4px;
+  font-family: PingFang-SC-Bold;
+  font-size: 0.7em;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+}
+.container3_2{
+  width: 89.3%;
+  /* height: 5.5%; */
+  height: 25px;
+  line-height: 25px;
+  margin:  auto;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background: #3AA6E1;
+  border-radius: 4px;
+  font-family: PingFang-SC-Bold;
+  font-size: 0.7em;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+}
+.choujiang{
+  width: 5%;
+  margin-top: 0.9%
+}
+.choujiang2{
+  width: 20%;
+}
+.huojiang{
+  width: 68%;
+  height:280rpx;
+  margin: auto;
+  margin-top: 20rpx;
+  background: #F5F7FA;
+  position:relative;
+  top:-41rpx;
+ }
+.container3_p{
+  /* padding:10rpx; */
+  width: 100%;
+  height: 60rpx;
+  font-family: PingFang-SC-Bold;
+  font-size: 14px;
+  color: #4A4A4A;
+  letter-spacing: 0;
+  text-align: center;
+  margin: auto;
+  line-height: 60rpx;
+}
+.container4{
+  /* padding:10rpx;  */    
+  width: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  height: 60rpx;
+  margin: auto;
+  font-family: PingFang-SC-Medium;
+  font-size: 24rpx;
+  color: #9B9B9B;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 60rpx;
+}
+.swiper-item{
+   height: 65rpx;
+   width:100%;
+}
+.swiper_container {
+    height: 205rpx;
+    width:100%;
+ }
+.container5{
+  width: 70%;
+  margin: auto;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-around;
+  position:relative;
+  top:-30rpx;
+  z-index: 1000
+}
+.container5_bm{
+  padding-top: 40rpx;
+  width: 26.7%;
+  display: flex;
+  justify-content:center;
+  margin: auto;
+  border: 1px seagreen solid;
+}
+
+
+/* 积分滚动 */
+.swiper_container1 {
+  height: 50rpx;
+  width: 80vw;
+}
+.swiper_item1 {
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* 遮罩层 */
+.container6{
+  width: 100%;
+  height: 400rpx;
+  background-color: red;
+  opacity: 0;
+  position:absolute;
+  top:800rpx;
+}

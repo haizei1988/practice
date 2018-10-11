@@ -1,0 +1,215 @@
+<!--pages/bisaizhuangtai/bisaizhuangtai.wxml-->
+<!--pages/fabutiaozhan/fabutiaozhan.wxml-->
+<view class='container1'>
+  <view class='container1_1'>
+    <image class='touxiang' src="{{SHeadimgurl}}" />
+  </view>
+  <view class='container1_2'>
+    <view>{{SNickname}}</view>
+    <view>{{Autograph}}</view>
+  </view>
+</view>
+<view class='container2'>
+  <view class='container2_1'>
+    <navigator class='chongzhi' url='/pages/chongzhi/chongzhi'>
+      充值
+    </navigator>
+    <view style='margin-left:30rpx'>
+      <view class='container2_1_1'>我的余额</view>
+      <view class='container2_1_2'>{{TotalBalanceNum}}</view>
+    </view>
+  </view>
+  <view class='container2_2'>
+    <view>
+      <view class='container2_1_1'>我的积分</view>
+      <view class='container2_1_2'>{{TotalIntegralNum}}</view>
+    </view>
+  </view>
+</view>
+<!-- 已报名 -->
+<view hidden='{{kaishi}}'>
+  <view class='container3'>
+    <view class='container3_1'>
+      {{DisplayEnrollStatus}}
+    </view>
+  </view>
+
+  <view class='container4'>
+    我正在参加{{StepNum}}步达标赛{{DisplayChallengeAmt}}赛区
+  </view>
+  <!-- <view class='container5'>
+    <view> 当前参赛总金额(元）</view>
+    <view> 奖金总额（{{bonus}}）</view>
+  </view>
+  <view class='container6'>
+    <view class='container6_1'> {{HaveEnrollAmt}}</view>
+    <view class='container6_2'> {{RewardHotCardNum}}</view>
+  </view> -->
+  <view class='container6'>
+    <view class='container5'>
+      <view> 当前参赛总金额(元）</view>
+      <view class='container6_1'> {{HaveEnrollAmt}}</view>
+    </view>
+    <view class='container5'>
+     
+    </view>
+    <view class='container5'>
+      <view> 奖金总额（{{bonus}}）</view>
+      <view class='container6_1'>{{RewardHotCardNum}}</view>
+    </view>
+  </view>
+
+
+   <view class='container7'>
+    <view> 当前已有{{HaveEnrollNum}}人参加比赛</view>
+    <!-- <view> 距离比赛结束：1天11小时23分钟</view> -->
+   </view>  
+  <view class='container8'>
+    <view class='container8_1'>
+     {{zhuangtai}}{{clock}}
+    </view>
+  </view>
+  <view class='container9'>
+  <view class='container9_1'>
+    参赛费： {{DisplayChallengeAmt}}
+  </view>
+  <view class='container9_2'>
+    <view class='container9_2_1'>开始：{{StartTime}}</view>
+    <view class='container9_2_1'>结束：{{EndTime}}</view>
+  </view>
+</view>
+</view>
+
+<!-- 已结束 -->
+
+<view hidden='{{jieshu}}'>
+  <view class='container3'>
+    <view class='container3_1'>
+      已结束
+    </view>
+    <view class='container3_2'>
+      {{StepNum}}步达标赛{{DisplayChallengeAmt}}赛区
+    </view>
+  </view>
+
+
+
+  <view wx:if="{{WhetherDrawn==true}}">
+      <view class='container11' wx:if="{{touxiang!=''}}">
+      <view class='container11_1'>
+        <image class='container11_1_img1' wx:if="{{DisplayChallengeAmt=='五元'}}" src="{{touxiang[0].SHeadimgurl}}"/>
+        <image class='container11_1_img2' wx:if="{{DisplayChallengeAmt=='五元'}}" src="{{touxiang[1].SHeadimgurl}}"/>
+        <image class='container11_1_img3' wx:if="{{DisplayChallengeAmt=='五元'}}" src="{{touxiang[2].SHeadimgurl}}"/> 
+  
+        
+        <image class='container11_1_img1' wx:if="{{DisplayChallengeAmt=='三元'}}" src="{{touxiang[0].SHeadimgurl}}"/>
+        <image class='container11_1_img2' wx:if="{{DisplayChallengeAmt=='三元'}}" src="{{touxiang[1].SHeadimgurl}}"/>
+        <image class='container11_1_img3' wx:if="{{DisplayChallengeAmt=='三元'}}" src="{{touxiang[2].SHeadimgurl}}"/>  
+      
+      </view>
+      <view>
+        <view class='container11_2_1'>恭喜你</view>
+        <view class='container11_2_2' wx:if="{{DisplayChallengeAmt=='五元'}}">获得第{{RankingNum}}名</view>
+        <view class='container11_2_2' wx:if="{{DisplayChallengeAmt=='三元'}}">获得第{{RankingNum}}名</view>
+          <!-- <view class='container11_2_2' wx:if="{{DisplayChallengeAmt=='一元'}}">获得第{{RankingNum}}名</view> -->
+        <view class='container11_2_3'>获得{{PersonalBonus}}{{bonus}}</view>
+      </view>
+    </view>
+    <view wx:else class='weihuojiang'>
+    此比赛暂未有人获奖
+    </view> 
+  </view>
+
+<view wx:if="{{WhetherDrawn==false}}">
+    <view class='weihuojiang'>
+    此比赛您未获奖，请加油哟
+    </view>
+</view>
+  <view class='container12'>
+      <navigator url="/pages/over/over?ID={{ID}}" class='container12_1'>查看详情</navigator>
+      <navigator class='container12_1' url='/pages/baoming/baoming'>继续报名</navigator>
+    </view>
+
+
+
+  <view class='container9'>
+  <view class='container9_1'>
+    参赛费： {{DisplayChallengeAmt}}
+  </view>
+  <view class='container9_2'>
+    <view class='container9_2_1'>开始：{{StartTime}}</view>
+    <view class='container9_2_1'>结束：{{EndTime}}</view>
+  </view>
+</view>
+</view>
+
+<view class='container10'>
+  <view class='container101'>
+    <navigator url='/pages/jinsai/jinsai' class='container10_1'>
+      <view class='container10_1_1'>
+        <view class='container10_1_1_1'>
+          发布挑战
+        </view>
+        <view class='container10_1_1_2'>
+          和好友一较高低
+        </view>
+      </view>
+      <view>
+        <image src='/images/iconwechart.png' mode='widthFix' class="container10_1_2" />
+      </view>
+    </navigator>
+    <navigator url='/pages/tiaozhanjilu/tiaozhanjilu' class='container10_1'>
+      <view class='container10_1_1'>
+        <view class='container10_1_1_1'>
+          我的挑战记录
+        </view>
+        <view class='container10_1_1_2'>
+          看看自己的战绩
+        </view>
+      </view>
+      <view>
+        <image src='/images/icontiaozhan.png' mode='widthFix' class="container10_1_2" />
+      </view>
+    </navigator>
+    <navigator url="/pages/challeng/challeng?name=免费专区" class='container10_1'>
+      <view class='container10_1_1'>
+        <view class='container10_1_1_1'>
+          免费专区
+        </view>
+        <view class='container10_1_1_2'>
+          免费挑战,赚取积分
+        </view>
+      </view>
+    </navigator>
+    <view bindtap='challengMoney' data-type='一元专区' class='container10_1'>
+      <view class='container10_1_1'>
+        <view class='container10_1_1_1'>
+          一元专区
+        </view>
+        <view class='container10_1_1_2'>
+          体验挑战，初出茅庐
+        </view>
+      </view>
+    </view>
+    <view bindtap='challengMoney' data-type='三元专区' class='container10_1'>
+      <view class='container10_1_1'>
+        <view class='container10_1_1_1'>
+          三元专区
+        </view>
+        <view class='container10_1_1_2'>
+          中级挑战，谁与争锋
+        </view>
+      </view>
+    </view>
+    <view bindtap='challengMoney' data-type='五元专区' class='container10_1'>
+      <view class='container10_1_1'>
+        <view class='container10_1_1_1'>
+          五元专区
+        </view>
+        <view class='container10_1_1_2'>
+          正逢挑战，独霸群雄
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

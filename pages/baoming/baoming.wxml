@@ -1,0 +1,94 @@
+<view class='container'>
+  <!-- <navigator class="container_v1" url="/pages/challeng/challeng?name=免费专区"> -->
+  <view class="container_v1 nav-title" bindtap='notMoney'>免费参加</view>
+  <!-- </navigator> -->
+  <view class="container_v1" bindtap="clickArea">{{feiyong}}
+    <view class="container_v1_xiala1" hidden="{{selectArea}}">
+      <!-- <view>
+        <navigator bindtap='challengMoney' data-type='一元专区' url="/pages/challeng/challeng?name=一元">一元</navigator>
+      </view> -->
+      <view>
+        <view bindtap='oneMoney' data-id="1" data-type='一元专区'>一元</view>
+      </view>
+      <view>
+        <view bindtap='oneMoney' data-id="3" data-type='三元专区'>三元</view>
+      </view>
+      <view>
+        <view bindtap='oneMoney' data-id="5" data-type='五元专区'>五元</view>
+      </view>
+      <view>
+        <view bindtap='oneMoney' data-id="0" data-type='五元专区'>更多</view>
+      </view>
+    </view>
+    <image src='/images/three.png' class='three'></image>
+  </view>
+
+  <view class="container_v1" bindtap="clickfeiyong">{{jinsaibushu}}
+    <view class="container_v1_xiala2" hidden="{{selectfeiyong}}">
+      <view>
+        <view data-start="5000" bindtap='stepnum' data-end="10000">五千到一万</view>
+      </view>
+      <view>
+        <view data-start="10000" bindtap='stepnum' data-end="30000">一万到三万</view>
+      </view>
+      <view>
+        <view data-start="0" bindtap='stepnum' data-end="0">更多</view>
+      </view>
+    </view>
+    <image src='/images/three.png' class='three'></image>
+  </view>
+</view>
+<!-- 查询 -->
+<view class='search'>
+   <view class='search_input'>
+    <input placeholder='请输入微信用户名称' bindinput='bindkeyinput'  class="search_input_user" placeholder-class='search_input_content'/>
+   </view>
+    <button class='search_btn' bindtap='search'>
+    查询
+   </button>
+</view>
+<!-- 图片 -->
+<view hidden='{{you}}'>
+  <view style='position:relative'  wx:for="{{xinxi}}" wx:for-index="num">
+    <navigator url="/pages/baomingxingqing/baomingxiangqing?challengeLogID={{item.ID}}">
+      <view data-index="{{index}}" wx:if='{{num%2==0}}'>
+        <image src='/images/run1.png' class='shiyan' id='img1' />
+      </view>
+      <view data-index="{{index}}" wx:if='{{num%2!==0}}'>
+        <image src='/images/run2.png' class='shiyan'  id='img2' />
+      </view>
+      <view class='game_desc'>
+        <view class='guize'>
+        <view class='wenzi'>
+         <text>
+               开始：{{item.DisplayShortStartTime}}
+               结束：{{item.DisplayShortEndTime}}
+               参赛人数：{{item.TotalPeopleNum}}人
+               已报名人数：{{item.HaveEnrollNum}}人
+               竞赛步数：{{item.StepNum}}步
+               参赛费用：{{item.DisplayChallengeAmt}}
+          </text>
+           <view wx:if="{{item.DisplayChallengeAmt=='一元'}}"  class='guize1'>此次达标者平分本次竞赛总奖励</view>
+           <view wx:if="{{item.DisplayChallengeAmt=='三元'}}"  class='guize1'>此次达标者前三名按比例分配本次竞赛总奖励</view>
+           <view wx:if="{{item.DisplayChallengeAmt=='五元'}}"  class='guize1'>此次达标者前三名按比例分配本次竞赛总奖励</view>
+           <view wx:if="{{item.DisplayChallengeAmt=='免费'}}"  class='guize1'>达标者免费赢得积分奖励</view>
+        </view>
+         
+        </view>
+        <view class='sign_b'>
+          <!-- <view class='new_num'>当前已有{{item.HaveEnrollNum}}人参加比赛</view> -->
+          <view class='sign_up' url="/pages/baomingxingqing/baomingxiangqing?challengeLogID={{item.ID}}">点击报名</view>
+        </view>
+
+      </view>
+      <view class="container2">
+        <view class="container2_1">{{item.WeXinUserName}}发起了挑战，快来挑战</view>
+        <navigator url="/pages/baomingxingqing/baomingxiangqing?challengeLogID={{item.ID}}" class="container2_2">剩余名额{{item.SurplusEnrollNum}}人</navigator>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view hidden='{{wu}}' class='wu'>
+  暂时无此条件比赛
+</view>

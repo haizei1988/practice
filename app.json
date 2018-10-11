@@ -1,0 +1,71 @@
+{
+  "pages": [     
+     "pages/index/index",
+    "pages/baomingxingqing/baomingxiangqing", 
+
+
+    "pages/jinsai/jinsai",
+    "pages/kongbai/kongbai",
+    "pages/tiaozhanjilu/tiaozhanjilu",
+    "pages/shopping/shopping",
+    "pages/zongpaihang/zongpaihang",
+    "pages/baoming/baoming",
+    "pages/login/login",
+    "pages/user/user",
+    "pages/xiaoxitixiang/xiaoxitixiang",
+    "pages/fabutiaozhan/fabutiaozhan",
+    "pages/bushujilu/bushujilu",
+    "pages/yijieshu/yijieshu",
+    "pages/jifendetail/jifendetail",
+    "pages/rekadetail/rekadetail",
+    "pages/chongzhi/chongzhi",
+    "pages/pingtaijifen/pingtaijifen",
+    "pages/logs/logs",
+    "pages/duihuan/duihuan",
+    "pages/guize/guize",
+    "pages/duihuanjilu/duihuanjilu",
+    "pages/tianqi/tianqi",
+    "pages/guanyuwomen/guanyuwomen",
+    "pages/challeng/challeng",
+    "pages/over/over",
+    "pages/bisaizhuangtai/bisaizhuangtai",
+    "pages/faqijilu/faqijilu",
+    "pages/messagedetails/messagedetails"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#509DDF",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#333",
+    "backgroundColor": "#fefefe",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/botbarhome.png",
+        "selectedIconPath": "images/botbarhome2.png"
+      },
+      {
+        "pagePath": "pages/fabutiaozhan/fabutiaozhan",
+        "text": "竞赛",
+        "iconPath": "images/botbargame.png",
+        "selectedIconPath": "images/botbargame2.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "商城",
+        "iconPath": "images/botbarshop.png",
+        "selectedIconPath": "images/botbarshop2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/botbarme.png",
+        "selectedIconPath": "images/botbarme2.png"
+      }
+    ]
+  }
+}

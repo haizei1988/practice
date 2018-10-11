@@ -1,0 +1,117 @@
+<!--pages/jinsai/jinsai.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<import src="../../components/toast.wxml" />
+<template is="toast" data="{{ ...$wux.toast }}" />
+<view class='container1'>
+  <view class='container1_1'>
+    <image class='touxiang' src='{{SHeadimgurl}}' />
+  </view>
+  <view class='container1_2'>
+    <view>{{SNickname}}</view>
+    <view>{{qianming}}</view>
+  </view>
+</view>
+<form class="form" bindsubmit="formSubmit" report-submit="true">
+  <!-- <view  class='container2'> -->
+  <!-- <view class='container2_1'>开始日期：</view>
+   <view></view> -->
+  <view class="container2">
+
+
+      <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+    <view class="container2_1">
+    <view class="container2_1_1">开始日期：</view>
+    <view class="container2_3">
+       {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} <view class='dang'></view> {{dateTimeArray1[3][dateTime1[3]]}}时
+    </view>
+    </view> 
+  </picker>  
+
+
+ 
+     <!-- <picker mode="date" value="{{date}}" start="2018-01-01" bindchange="bindDateChange">
+      <view class="container2_1">
+        <view class="container2_1_1">开始日期：</view>
+        <view class='container2_3'>{{date}}</view>
+      </view>     
+    </picker>     -->
+     <!-- <image src='/images/three.png' class='three1'></image> -->
+    <!-- <picker bindchange="bindTimeChange" value="{{index}}" class='time1' range="{{arraytime}}">
+    <view class="picker">
+      {{arraytime[index1]}}时
+    </view>
+    </picker>  -->
+     <image src='/images/three.png' class='three1'></image> 
+    <view>
+    </view>
+  </view>
+  <view class="container3">
+    <!-- <picker mode="date" value="{{date}}" start="2018-01-01" bindchange="bindDateChange2"> -->
+      <view class="container2_1">
+        <view class="container2_1_1"> 结束日期：</view>
+         <!-- <view class='container2_3'>{{date}}</view>  -->
+         <view class='container2_3'>{{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}}</view> 
+      </view>
+    <!-- </picker> -->
+     <!-- <image src='/images/three.png' class='three1'></image> -->
+    <!-- <picker mode="time" value="{{time}}" start="09:01" class='time1' end="21:01" bindchange="bindTimeChange2">
+        <view class="picker">
+          {{time_over}}
+        </view>
+    </picker> -->
+     <picker bindchange="bindTimeChange2" value="{{index}}" class='time1' range="{{arraytime}}">
+    <view class="picker">
+      {{arraytime[index2]}}时
+    </view>
+    </picker>
+    <image src='/images/three.png' class='three1'></image>
+    <view>      
+    </view>
+  </view>
+  <view class='container2'>
+    <view class='container2_1 container2_1_1'>竞赛费用：</view>
+    <view></view>
+    <!-- <view class='container2_3'>1元</view> -->
+
+    <picker bindchange="bindPickerChange" value="{{index}}" class='container2_3' range="{{array}}">
+      <view class='money' hidden='{{money}}'>请选择金额</view>
+      <view class="picker" hidden='{{xuanze}}'>
+        {{array[index]}}
+      </view>
+    </picker>
+   
+  </view>
+  <view class='container3'>
+    <view class='container2_1 container2_1_1'>竞赛人数：</view>
+    <view></view>
+    <input placeholder="{{num}}" class='container2_3' name="num" placeholder-class="placeholder" />
+  </view>
+  <view class='container2'>
+    <view class='container2_1 container2_1_1'>竞赛步数：</view>
+    <view></view>
+    <input placeholder="{{bushu}}" class='container2_3' name="bushu" placeholder-class="placeholder" />
+  </view>
+  <view class='container4' bindtap='dianji'>
+    <image src='{{checkbox}}' class='container4_img1' mode='widthFix' bindtap='checkType' />
+    <!-- <image src='/images/after.png' class='container4_img1' mode='widthFix'  hidden='{{after}}'/> -->
+    <view bindtap='readDecs'>用户协议</view>
+
+  </view>
+
+  <button class='container5' formType="submit">
+    发布竞赛
+  </button>
+</form>
+<view class='container6' hidden='{{shengming}}'>
+  <scroll-view scroll-y class='container8_1'>
+    <view class='container8_1_p1'>《用户协议》</view>
+    <!-- <text class='container8_1_p2'> -->
+    <template is="wxParse" data="{{wxParseData:markdown.nodes}}" />
+
+    <!-- </text> -->
+  </scroll-view>
+
+  <view class="container8_2">
+    <image src="/images/readered.png" mode="widthFix" class="container8_2_1" bindtap="clickclose" />
+  </view>
+</view>

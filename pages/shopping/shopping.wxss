@@ -1,0 +1,156 @@
+/* pages/shopping/shopping.wxss */
+.container1{
+  width: 100%;
+
+}
+.container2{
+  padding-top: 20rpx;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  fill-opacity: row;
+  font-size:29rpx;
+  padding-left:10px;
+}
+.container2_1{
+  width:17.6%;
+  height:33rpx;
+  margin:auto;
+  padding-top:1%;
+  padding-bottom:1%;
+  background:#3AA6E1;
+  border-radius:4px;
+  font-family:PingFang-SC-Bold;
+  font-size:24rpx;
+  color:#FFFFFF;
+  letter-spacing:0;
+  text-align:center;
+  line-height:33rpx;
+  position: relative;
+  z-index: 100
+}
+.choujiang{
+  width: 5%;
+  position: relative;
+  top:6rpx;
+  left:-17rpx;
+}
+.container3{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  font-family: PingFang-SC-Bold;
+  font-size:0.9em;
+  color: #36353A;
+  letter-spacing: 0;
+  /* border: 1px saddlebrown solid; */
+  margin-top: 36rpx;
+  
+}
+.tap_active{
+  border-bottom: 2px  #3AA6E1 solid; 
+}
+.container3_1{
+  width: 33.33333333333%;
+  text-align: center;
+  padding-bottom:10rpx; 
+}
+.container3_2,.container3_3{
+  text-align: center;
+  width: 33.3333333333333%;
+  padding-bottom:10rpx; 
+}
+.zong{
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.chongzhi,.gouwu{
+  width: 100%;
+  /* display: none; */
+  position:absolute;
+  top:0;
+}
+.container4{
+  display: flex;
+  /* width: 90%; */
+  margin: 30rpx auto;
+  position: relative;
+}
+.container4_1{
+  width: 43.2%;
+  height: 196rpx;
+}
+.container4_2{
+  margin-left: 40rpx;
+}
+.container4_2_1{
+  width: 100%;
+  font-family: PingFang-SC-Bold;
+  font-size: 0.9em;
+  color: #36353A;
+  letter-spacing: 0;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.container4_2_2{
+  font-family: PingFang-SC-Medium;
+  font-size: 14px;
+  color: #9B9B9B;
+  letter-spacing: 0;
+
+}
+.container4_2_3{
+  font-family: PingFang-SC-Medium;
+font-size: 14px;
+color: #FF5745;
+letter-spacing: 0;
+
+}
+.container4_2_4{
+  width:30%;
+  margin:auto;
+  background:#3AA6E1;
+  border-radius:4px;
+  font-family:PingFang-SC-Bold;
+  font-size:35rpx;
+  color:#FFFFFF;
+  letter-spacing:0;
+  text-align:center;
+  position:absolute;
+  bottom:0;
+  height:50rpx;
+  line-height: 50rpx
+}
+.container5{
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
+.tab-h{
+  height: 80rpx;width: 100%; box-sizing: border-box;overflow: hidden;line-height: 80rpx;background: #F7F7F7; font-size: 16px; white-space: nowrap;position: fixed;top: 0; left: 0; z-index: 99;}
+
+
+  /* 积分滚动 */
+.swiper_container1 {
+  height: 50rpx;
+  width: 80vw;
+}
+.swiper_item1 {
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} 
+.wu{
+  width: 100%;
+  text-align: center;
+   padding: 200rpx 0rpx; 
+  box-sizing: border-box; 
+  font-size: 0.8em
+}

@@ -1,0 +1,96 @@
+  <loading hidden="{{hidden}}">
+        正在加载
+    </loading> 
+<view class='container1'> 
+  <image src='{{baseurl}}{{StroongAttachments}}' mode="widthFix" class='container1_img'/>
+  <view class='container1_1'>
+    <view class='container1_1_1'>
+      {{GoodName}}
+    </view>
+    <view class='container1_1_2'>
+      {{GoodPriceStr}}
+    </view>
+  </view>
+</view>
+<view class='container2'>
+  <view class='container2_1'>
+   兑换详情
+  </view>
+  <text  class='container2_2'>
+   {{ExchangeDetail}} 
+  <!-- 暂无介绍 -->
+  </text>
+  <!-- <text wx:if="{{ExchangeDetail}}!==null" class='container2_2'>
+   {{ExchangeDetail}}  
+  </text> -->
+</view>
+<view class='container3'bindtap="showDialogBtn">
+  立即兑换
+</view>
+<!-- modal -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <image src='{{baseurl}}{{SmallAttachments}}' class='exchange_img'></image>
+  <view class="modal-title">{{GoodName}}</view>
+  <view class='modal-price'>价值{{GoodPrice}}元</view>
+  <view class='modal-virtual'>{{GoodPriceStr}}</view>
+  <view class="modal-content">
+  <view class="modal-box">
+   <view class="modal-input">手机</view>
+    <view>
+     <input placeholder-class="input-holder" bindinput="inputChange1" class="input" placeholder="必填手机号"></input>
+    </view>
+  </view>
+   <view class="modal-box">
+       <view class="modal-input">邮寄地址</view>
+    <view>
+     <input placeholder-class="input-holder" bindinput="inputChange2" class="input" placeholder="地址（非必填）"></input>
+    </view> 
+   </view>
+
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+<view> 
+</view>
+
+ 
+  <!-- <view class="modal-mask1" hidden="{{selectbao2}}">
+  <view class="">
+   <view class="container4_1-bai1" style='position:relative;z-index:9999'>
+     <view class="container4_1-bai_1" >
+        <view class="container8_1_2" style='text-align: center;margin:auto'> 
+          <view class="container8_1_2_1">您已成功兑换本商品 </view>
+          <view class="container8_1_2_2">客服稍后将会与您取得联系</view>
+          <view class="container8_1_2_3">当前热卡币余额：{{TotalHotCardNum}}</view>
+        </view>
+     <view>
+    </view>
+   </view>
+  </view>
+  <view class="container8_2"  bindtap="clickclose2">
+    <view class="container8_2_1">
+      返回
+    </view>
+  </view>
+ </view>
+</view>  -->
+<!-- <viw>    -->
+
+
+
+ 
+ <view class="modal-mask1" bindtap="hideModal" style='text-align: center;margin:auto' catchtouchmove="preventTouchMove" hidden="{{selectbao2}}"></view>
+ <view class="modal-dialog" style='text-align: center;margin-left:37rpx' hidden="{{selectbao2}}">
+  <view class="container8_1_2_1">您已成功兑换本商品</view>
+  <view class="container8_1_2_2">客服稍后将会与您取得联系</view>
+  <view class="container8_1_2_3">当前热卡币余额：{{TotalHotCardNum}}</view>
+  <view class="modal-footer">
+    <view class="btn-confirm1" bindtap="clickclose2" data-status="confirm">确定</view>
+  </view>
+</view>
+<view> 
+</view>   

@@ -1,0 +1,37 @@
+<!--pages/faqijilu/faqijilu.wxml-->
+<!--pages/over/over.wxml-->
+<!-- <text>pages/over/over.wxml</text> -->
+<view>
+  <view class='head'>
+    <image src="{{SHeadimgurl}}" class='user_img'></image>
+    <view>{{SNickname}}</view>
+    <view>{{qianming}}</view>
+    <!-- <view>{{overTitle}}</view> -->
+  </view>
+  <view class='contents'>
+    <view>
+      开始：{{StartTime}}
+    </view>
+    <view>
+      结束：{{EndTime}}
+    </view>
+    <view>
+      竞赛步数：{{StepNum}}步
+    </view>
+    <!-- <view>
+      已报名人数：{{HaveEnrollNum }}
+    </view> -->
+    <view>
+      竞赛费用：{{ChallengeAmt}}元
+    </view>
+    <view>
+      总费用：{{TotalChallengeAmt}}
+    </view>
+    <view>
+      已报名人数：{{HaveEnrollNum }}人
+    </view>
+    <view>
+      竞赛人数：{{TotalPeopleNum}}人
+    </view>
+  </view>
+</view>

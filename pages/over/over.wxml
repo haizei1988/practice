@@ -1,0 +1,92 @@
+<!--pages/over/over.wxml-->
+<!-- <text>pages/over/over.wxml</text> -->
+<view>
+  <view class='head'>
+    <image src="{{SHeadimgurl}}" class='user_img'></image>
+    <view>{{SNickname}}</view>
+    <view>{{qianming}}</view>
+<!--  
+       <view wx:if="{{RankingNum<=3}}">您在本次比赛中排名{{RankingNum}}位，恭喜您获得{{DisplayRewardHotCardNum}}，再接再厉。</view>
+      <view wx:if="{{RankingNum>3}}">您在本次比赛中排名{{RankingNum}}位，很遗憾您未能获得奖励，再接再厉。</view>   -->
+         <view >{{neirong}}</view>   
+       
+       <!-- <view wx:if="{{RankingNum>3}}">很遗憾您未能获得奖励，再接再厉。</view>   -->
+
+    <view>{{overTitle}}</view>
+  </view>
+  <view class='contents'>
+    <view>
+      开始：{{StartTime}}
+    </view>
+    <view>
+      结束：{{EndTime}}
+    </view>
+    <view>
+      竞赛步数：{{StepNum}}步
+    </view>
+    <!-- <view>
+      竞赛时间：{{DisplayChallengeTime}}
+    </view> -->
+    <view>
+      竞赛费用：{{ChallengeAmt}}
+    </view>
+    <view>
+      总费用：{{TotalChallengeAmt}}元
+    </view>
+    <view>
+      竞赛人数：{{TotalPeopleNum}}人
+    </view>
+  </view>
+  <view class='sort' hidden="{{touxiang==''}}">
+
+    <view wx:if="{{ChallengeAmt=='三元'}}">
+      <text>第二名</text>
+      <view class='bg'>
+        <image src='/images/no3.png'></image>
+        <image src='{{touxiang[1]}}' class='sort_img'></image>
+      </view>
+    </view>
+      <view wx:if="{{ChallengeAmt=='三元'}}">
+      <text>第一名</text>
+      <view class='bg'>
+        <image src='/images/no1.png' style='top:-5rpx;'></image>
+        <image src='{{touxiang[0]}}' class='sort_img'></image>
+      </view>
+
+    </view>
+    <view wx:if="{{ChallengeAmt=='三元'}}">
+      <text>第三名</text>
+      <view class='bg'>
+        <image src='/images/no2.png'></image>
+        <image src='{{touxiang[2]}}' class='sort_img'></image>
+      </view>
+    </view>
+
+
+
+
+
+    <view wx:if="{{ChallengeAmt=='五元'}}">
+      <text>第二名</text>
+      <view class='bg'>
+        <image src='/images/no3.png'></image>
+        <image src='{{touxiang[1]}}' class='sort_img'></image>
+      </view>
+    </view>
+      <view wx:if="{{ChallengeAmt=='五元'}}">
+      <text>第一名</text>
+      <view class='bg'>
+        <image src='/images/no1.png' style='top:-5rpx;'></image>
+        <image src='{{touxiang[0]}}' class='sort_img'></image>
+      </view>
+
+    </view>
+    <view wx:if="{{ChallengeAmt=='五元'}}">
+      <text>第三名</text>
+      <view class='bg'>
+        <image src='/images/no2.png'></image>
+        <image src='{{touxiang[2]}}' class='sort_img'></image>
+      </view>
+    </view>
+  </view>
+</view>

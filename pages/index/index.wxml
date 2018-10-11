@@ -1,0 +1,109 @@
+<!--index.wxml-->
+<!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view> -->
+  <loading hidden="{{hidden}}">
+        正在加载数据
+    </loading> 
+<view class="container">
+
+  <view class="container_v1">
+    <view class="container_v1_1">
+        <view class='shuzi'>{{HotCard}}</view>热卡币
+    </view>
+    <navigator url="/pages/zongpaihang/zongpaihang" class="container_v1_1">
+        <view class='shuzi'>{{ranking}}</view>排名数
+    </navigator> 
+  </view>
+</view>
+  
+ <!-- 图片 -->
+ <view style='position:relative'>
+  <image src='/images/bbg.png' mode='widthFix' style='position:absolute;width:100%;z-index:-10;top:-4px;' />
+  <image src='/images/icon-1@2x.png' mode='widthFix' class="container_v1_img"/>
+ </view>
+
+ <view class="container_v1_img_1">
+  <view class="container_v1_img_1_1">今日步数</view>
+  <view class="container_v1_img_1_2">{{todayRun}}</view>
+  
+  <view class="container_v1_img_1_3" bindtap='shuaxin' hidden='{{ing}}'>{{status2}}</view>
+  <view class="container_v1_img_1_3" bindtap='shuaxin' >{{StepNum}}</view>
+   <view class="container_v1_img_1_3" bindtap='shuaxin' class='shuaxin'>刷新
+   <!-- <image  mode="scaleToFill" animation="{{animation}}" src='/images/gengxin.png' class='gengxin'/> -->
+   </view>
+ </view>
+
+<view bindtap='begin' >
+<view class=" container3_2"  hidden='{{wujishi}}' style='position:relative;bottom:0rpx'>
+ {{status}}
+</view>
+<view class=" container3_2"  style='position:relative;bottom:0rpx' hidden='{{jishi}}'>
+离开始比赛还有: {{clock}}
+</view>
+</view>
+
+
+
+
+ <view class="container2">
+  <view class="container_v2">
+    <view class="container_v2_1">
+      <image src="/images/location.png" mode="widthFix" class='hah'/>{{currentCity}}
+    </view>
+    
+    <view class="container_v2_1">
+      <image src="/images/sun.png" mode="widthFix" class='hah'/> {{weatherDesc}}
+    </view>
+  </view>
+
+  <view class="container_v2 container_v2_2">
+    <view class="container_v2_1">
+      <image src="/images/air.png" mode="widthFix" class='hah'/>pm2.5：{{pm25}}
+    </view>
+    
+    <view class="container_v2_1">
+      <image src="/images/tempture.png" mode="widthFix" class='hah'/>{{temperature}}
+    </view>
+  </view>
+  
+ </view>
+ <view class="container3">
+  <image src="/images/iconmessage.png" mode="widthFix" class='choujiang'/>
+  <!-- <view class="container3_w">
+  {{IntegralRecord[0].Remark}}
+  </view> -->
+      <swiper class="container3_w swiper_container1" vertical="true" autoplay="true" circular="true" interval="2000">
+      <block wx:for="{{IntegralRecord}}">    
+          <swiper-item>
+            <view class="swiper_item1">{{item.Remark}}</view>
+          </swiper-item>
+      </block>
+    </swiper>
+ </view>
+
+<view class='huojiang' >
+ <view class="container3_p">
+  兑换信息
+ </view>
+<view wx:if="{{changdu <= 4}}" class="container4" wx:for="{{msgList}}"> {{item.DisplayRemark}} </view>
+ <!-- <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000" display-multiple-items='4'> -->
+  <swiper wx:if="{{changdu > 4}}" class="swiper_container" vertical="true" autoplay="true" 
+  display-multiple-items='4' circular="true" interval="2000"  >
+     <block wx:for="{{msgList}}" wx:key="{{index}}}">       
+         <swiper-item  class="swiper-item">
+              <view class="container4">{{item.DisplayRemark}}</view>  
+             <!-- <view class="container4">{{item.title}}</view> -->
+         </swiper-item>
+     </block>
+   </swiper>  
+</view> 
+<view  class="container6">
+</view>
+  <!-- 跳转到报名页 -->
+
+<view class="container5">
+     <navigator class="container3_1" url='/pages/baoming/baoming'>立即报名</navigator>  
+     <navigator class="container3_1" url='/pages/pingtaijifen/pingtaijifen'>进入抽奖</navigator> 
+</view>
+ 
+

@@ -1,0 +1,22 @@
+<!--pages/rekadetail/rekadetail.wxml-->
+<view class='container1'>
+    <image src='{{SHeadimgurl}}' class='container1_img'/>
+    <view class='container1_1'>{{SNickname}}</view>
+    <view class='container1_2'>{{Autograph}}</view>
+     <view class='container1_3'><view class='container1_3_1'> <span >当前热卡币：</span>  <span class='container1_3_2'>{{TotalHotCardNum}} </span>个</view>  </view>
+</view>
+
+<view class='container2'>
+  <view  class='container2_title'>热卡币记录：</view>
+  <view wx:if="{{reka==''}}">当前您没有热卡币记录</view>
+  <view wx:if="{{reka!==''}}" class='container2_1' wx:for="{{reka}}">
+     <view>{{item.Remark}}</view>
+     <view>{{item.DisplayCreatedTime}}
+     </view>
+  </view>
+    <!-- <view class='container2_1'>
+     <view>兑换充值卡消费30热卡比</view>
+     <view>2018/04/24  13:24:35
+     </view>
+  </view> -->
+</view>

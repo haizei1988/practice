@@ -1,0 +1,19 @@
+/* pages/login/login.wxss */
+.button{
+  width: 77.3%;
+  height: 80rpx;
+  background: #3AA6E1;
+  border-radius: 4px;
+  color:white;
+  font-size: 0.9em;
+  line-height: 80rpx
+}
+.bg_img{
+  width:100%;
+}
+.logo{
+  width: 174rpx;
+  position: relative;
+  left: 38%;
+  bottom:88rpx
+}

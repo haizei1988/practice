@@ -1,0 +1,85 @@
+<!--pages/shopping/shopping.wxml-->
+
+<image src='/images/shopping.png' mode='widthFix' class='container1'/>
+ <view class="container2">
+  <image src="/images/iconmessage.png" mode="widthFix" class='choujiang'/>
+        <swiper class="container3_w swiper_container1" vertical="true" autoplay="true" circular="true" interval="2000">
+      <block wx:for="{{IntegralRecord}}">
+       
+          <swiper-item>
+            <view class="swiper_item1">{{item.Remark}}</view>
+          </swiper-item>
+      
+      </block>
+    </swiper>
+  <navigator  url='/pages/pingtaijifen/pingtaijifen' class="container2_1">进入抽奖</navigator>
+ </view>
+ <view class="container3">
+     <view class="container3_1" class="{{shoppingType==='1'?'tap_active container3_1': 'container3_1'}}" bindtap='clickchongzhi' data-shopping='1'>
+       充值卡
+    </view>
+    <view class="container3_2"  bindtap='clickgouwu' class="{{shoppingType==='2'?'tap_active container3_2': 'container3_2'}}" data-shopping='2'>
+     商品
+    </view>
+    <view class="container3_3" bindtap='clickhuiyuan' class="{{shoppingType==='3'?'tap_active container3_3': 'container3_3'}}" data-shopping='3'>
+     会员卡
+    </view> 
+  </view> 
+
+<view style='background-color:red;width:100%;height:494rpx;opacity:0;position:absolute;top:0'>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <view class="zong">
+ <view class="chongzhi" hidden='{{chongzhi}}'>
+     <view class="container4" wx:for="{{chongzhicards}}">
+        <image src='{{baseurl}}{{item.StroongAttachments[0].AttachmentURL}}'   class="container4_1"/>
+        <view class="container4_2">
+        <view class="container4_2_1">{{item.GoodName}}</view>
+        <view class="container4_2_2">价值{{item.GoodValuation}}元</view>
+        <view class="container4_2_3">{{item.GoodPriceStr}}</view>
+        <navigator class="container4_2_4" url='/pages/duihuan/duihuan?ID={{item.ID}}'>立即兑换</navigator>
+        </view>
+     </view>
+  </view>  
+ 
+ 
+ <view class="gouwu" hidden='{{gouwu}}'>
+    <view class="container4"  wx:for="{{cards}}">
+      <image src='{{baseurl}}{{item.StroongAttachments[0].AttachmentURL}}'   class="container4_1"/>
+      <view class="container4_2">
+      <view class="container4_2_1">{{item.GoodName}}</view>
+      <view class="container4_2_2">价值{{item.GoodValuation}}元</view>
+      <view class="container4_2_3">{{item.GoodPriceStr}}</view>  
+      <navigator class="container4_2_4" url='/pages/duihuan/duihuan?ID={{item.ID}}'>立即兑换</navigator>
+      </view>
+    </view>
+  </view>     
+ <view class="huiyuan" hidden='{{huiyuan}}'>
+    <view class="container4" wx:for="{{cardshuiyuan}}">
+      <image src='{{baseurl}}{{item.StroongAttachments[0].AttachmentURL}}'   class="container4_1"/>
+      <view class="container4_2">
+      <view class="container4_2_1">{{item.GoodName}}</view>
+      <view class="container4_2_2">价值{{item.GoodValuation}}元</view>
+      <view class="container4_2_3">{{item.GoodPriceStr}}</view>  
+      <navigator class="container4_2_4" url='/pages/duihuan/duihuan?ID={{item.ID}}'>立即兑换</navigator>
+      </view>
+    </view>
+  </view>   
+ </view>
+
+
+<view hidden='{{wu}}' class='wu'>
+无商品信息
+</view>

@@ -1,0 +1,40 @@
+@import "/wxParse/wxParse.wxss";/* pages/guanyuwomen/guanyuwomen.wxss */
+.container1{
+  width: 90%;
+  margin: auto;
+  background: #FFFFFF;
+  box-shadow: 0 5px 14px -10px rgba(0,0,0,0.50);
+  font-family: PingFang-SC-Regular;
+  font-size: 28rpx;
+  color: #36353A;
+  letter-spacing: 0;
+  text-align: justify;
+  padding: 40rpx;
+}
+.wxParse-p{
+  font-size: 12px;
+  line-height: 22px;
+}
+view{
+     overflow:auto; 
+}
+.container2{
+  display: flex;
+  justify-content: space-between;
+  width: 82.5%;
+  margin: auto;
+  background: #FFFFFF;
+  box-shadow: 0 5px 14px -10px rgba(0,0,0,0.50);
+  position:fixed; 
+  bottom:0; 
+  left: 8.5%
+}
+.container2_1_img{
+ width: 56rpx;
+}
+.container2_1_2{
+ font-family: PingFang-SC-Bold;
+ font-size: 10px;
+ color: #9B9B9B;
+ letter-spacing: 3px;
+}
